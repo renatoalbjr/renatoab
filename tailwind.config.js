@@ -10,12 +10,18 @@ module.exports = {
         primary2BaseGradient:
           "linear-gradient(90deg, #D95800 39.58%, #22211B 100%)",
       },
+      fontFamily: {
+        body: ["Hind Madurai", "sans-serif"],
+        title: ["Rajdhani", "sans-serif"],
+        subtitle: ["Maitree", "serif"],
+        numeric: ["Roboto Mono", "monospace"],
+      },
     },
   },
   daisyui: {
     themes: [
       {
-        mytheme: {
+        theme: {
           primary: "#D95800",
           secondary: "#D95800",
           accent: "#D95800",

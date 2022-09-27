@@ -40,12 +40,12 @@ const Sidebar: NextComponentType<NextPageContext, props, props> = ({
                 <a
                   href={`/#${id}`}
                   className={
-                    "text-base-100 text-2xl font-bold hover:text-white py-4 block text-right " +
+                    "text-lg uppercase font-title hover:text-white py-4 block text-right " +
                     (navVisibleID === undefined
-                      ? "py-0 "
+                      ? "py-0 text-base-content/50"
                       : ("before:content-[''] before:bg-base-300 before:absolute before:bottom-0 before:right-0 before:w-full before:rounded-full before:h-1 " +
                         "after:content-[''] after:bg-primary2BaseGradient after:absolute after:bottom-0 after:right-0 after:rounded-full after:h-1 after:ease-linear after:duration-200 " +
-                        (navVisibleID === id ? "after:w-full " : "after:w-0 ")
+                        (navVisibleID === id ? "after:w-full font-bold text-white " : "after:w-0 text-base-content/50")
                         )
                     )
                   }
