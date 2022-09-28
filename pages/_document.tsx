@@ -8,7 +8,7 @@ export default function Document() {
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Maitree:wght@200&family=Rajdhani:wght@500;700&family=Roboto+Mono:wght@300&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;700&family=Maitree:wght@200;400;600&family=Rajdhani:wght@500;600;700&family=Roboto+Mono:wght@100;300&display=swap"
           rel="stylesheet"
         />
       </Head>

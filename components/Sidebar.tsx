@@ -14,11 +14,16 @@ const Sidebar: NextComponentType<NextPageContext, props, props> = ({
   navTitles,
   navVisibleID,
   children,
+  className,
+  ...rest
 }: props) => {
   return (
     <div className="drawer drawer-mobile">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content flex flex-col items-center">
+      <div
+        className={"drawer-content flex flex-col items-center " + className}
+        {...rest}
+      >
         {/* <!-- Page content here --> */}
         <label
           htmlFor="my-drawer-2"
@@ -28,9 +33,9 @@ const Sidebar: NextComponentType<NextPageContext, props, props> = ({
         </label>
         {children}
       </div>
-      <div className="drawer-side">
+      <nav className="drawer-side">
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-        <ul className="px-12 min-w-max w-[20vw] max-w-xl bg-base-200 text-base-content flex flex-col justify-center">
+        <ol className="px-12 min-w-max w-[20vw] max-w-xl bg-base-200 text-base-content flex flex-col justify-center">
           {/* <!-- Sidebar content here --> */}
           {navIDs.map((id, index) => {
             if (navTitles.length <= index) return;
@@ -43,8 +48,8 @@ const Sidebar: NextComponentType<NextPageContext, props, props> = ({
                     "text-lg uppercase font-title hover:text-white py-4 block text-right " +
                     (navVisibleID === undefined
                       ? "py-0 text-base-content/50"
-                      : ("before:content-[''] before:bg-base-300 before:absolute before:bottom-0 before:right-0 before:w-full before:rounded-full before:h-1 " +
-                        "after:content-[''] after:bg-primary2BaseGradient after:absolute after:bottom-0 after:right-0 after:rounded-full after:h-1 after:ease-linear after:duration-200 " +
+                      : ("before:content-[''] before:bg-base-300 before:hover:bg-white/50 before:absolute before:bottom-0 before:right-0 before:w-full before:rounded-full before:h-[3px] " +
+                        "after:content-[''] after:bg-primary2BaseGradient after:absolute after:bottom-0 after:right-0 after:rounded-full after:h-[3px] after:ease-linear after:duration-200 " +
                         (navVisibleID === id ? "after:w-full font-bold text-white " : "after:w-0 text-base-content/50")
                         )
                     )
@@ -55,8 +60,8 @@ const Sidebar: NextComponentType<NextPageContext, props, props> = ({
               </li>
             );
           })}
-        </ul>
-      </div>
+        </ol>
+      </nav>
     </div>
   );
 };
