@@ -50,7 +50,7 @@ const Home: NextPage = () => {
         navIDs={sections}
         navTitles={sections}
         navVisibleID={visibleSection}
-        // className="bg-transparent"
+        className="scrollbar-thin "
       >
         <section
           id="Intro"
@@ -61,7 +61,7 @@ const Home: NextPage = () => {
         <section
           id="Portfolio"
           ref={portfolioRef}
-          className="flex items-center justify-center h-[1000px] flex-shrink-0 w-full bg-emerald-100"
+          className="flex-shrink-0 w-full"
         >
           <Portfolio></Portfolio>
         </section>

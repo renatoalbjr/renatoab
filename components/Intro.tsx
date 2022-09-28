@@ -42,12 +42,12 @@ const Intro: NextComponentType<NextPageContext, props, props> = ({
         </p>
         <a
           href="#Portfolio"
-          className="btn btn-outline btn-primary rounded-full text-lg font-medium font-title mt-8"
+          className="btn btn-outline btn-primary rounded-full text-lg font-medium font-title mt-8 h-fit py-4 px-8"
         >
           Portfolio
         </a>
       </header>
-      <canvas className="background absolute -z-10 top-0 left-0 right-0 bottom-0" />
+      <canvas className="background absolute -z-10 left-0">Background</canvas>
     </>
   );
 };

@@ -11,7 +11,7 @@ module.exports = {
 
       sm: [
         //small
-        "0.833rem",
+        "0.937rem",
         {
           // lineHeight: "2rem",
           // letterSpacing: "-0.01em",
@@ -21,7 +21,7 @@ module.exports = {
 
       base: [
         //body
-        "1.125rem", //18px
+        "1.265rem", //18px
         {
           lineHeight: "1.75", //31px
           // letterSpacing: "-0.01em",
@@ -31,7 +31,7 @@ module.exports = {
 
       lg: [
         //h5
-        "1.200rem", //21px
+        "1.350rem", //21px
         {
           lineHeight: "1.3", //27px
           // letterSpacing: "-0.01em",
@@ -41,7 +41,7 @@ module.exports = {
 
       xl: [
         //h4
-        "1.440rem", //26px
+        "1.620rem", //26px
         {
           lineHeight: "1.3", //33px
           // letterSpacing: "-0.01em",
@@ -51,7 +51,7 @@ module.exports = {
 
       "2xl": [
         //h3
-        "1.728rem", //31px
+        "1.944rem", //31px
         {
           lineHeight: "1.3", //40px
           // letterSpacing: "-0.01em",
@@ -61,7 +61,7 @@ module.exports = {
 
       "3xl": [
         //h2
-        "2.074rem", //37px
+        "2.333rem", //37px
         {
           lineHeight: "1.3", //48px
           // letterSpacing: "-0.01em",
@@ -70,7 +70,7 @@ module.exports = {
       ],
       "4xl": [
         //h1
-        "2.488rem", //45px
+        "2.799rem", //45px
         {
           lineHeight: "1.3", //58px
           // letterSpacing: "-0.01em",
@@ -111,5 +111,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require("tailwind-scrollbar")],
 };
