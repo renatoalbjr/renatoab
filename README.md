@@ -25,7 +25,7 @@ However, I'm also using it to practice and expand my knowledge about frontend de
 - [x] Create `Portfolio` section
 - [x] Create `About Me` section
 - [x] Create `Contact` section
-- [ ] Create `Footer` section
+- [x] Create `Footer` section
 - [ ] Handle form submit
 - [ ] Create banner component to link projects to this website
 - [ ] Create projects routes

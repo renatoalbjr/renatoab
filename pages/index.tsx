@@ -77,7 +77,7 @@ const Home: NextPage = () => {
         >
           <Contact />
         </section>
-        <div className="flex items-center justify-center min-h-[150px] bg-emerald-700">
+        <div className="flex items-center flex-col justify-between py-6 lg:flex-row lg:px-24 min-h-[150px] bg-base-300">
           <Footer />
         </div>
       </Sidebar>

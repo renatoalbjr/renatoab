@@ -96,8 +96,8 @@ module.exports = {
       {
         theme: {
           primary: "#D95800",
-          secondary: "#D95800",
-          accent: "#D95800",
+          secondary: "#DE6F24",
+          accent: "#E28647",
           neutral: "#F4E2D6",
           "base-100": "#22211B",
           "base-200": "#3B3A34",

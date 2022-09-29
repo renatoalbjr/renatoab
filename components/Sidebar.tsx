@@ -19,7 +19,11 @@ const Sidebar: NextComponentType<NextPageContext, props, props> = ({
 }: props) => {
   return (
     <div className="drawer drawer-mobile">
-      <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+      <input
+        id="my-drawer-2"
+        type="checkbox"
+        className="drawer-toggle [&:checked~.drawer-side>.drawer-overlay]:[--nf:#000]"
+      />
       <div
         className={"drawer-content flex flex-col items-center " + className}
         {...rest}
@@ -34,7 +38,10 @@ const Sidebar: NextComponentType<NextPageContext, props, props> = ({
         {children}
       </div>
       <nav className="drawer-side">
-        <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
+        <label
+          htmlFor="my-drawer-2"
+          className="drawer-overlay !bg-black/50"
+        ></label>
         <ol className="px-12 min-w-max w-[20vw] max-w-xl bg-base-200 text-base-content flex flex-col justify-center">
           {/* <!-- Sidebar content here --> */}
           {navIDs.map((id, index) => {
