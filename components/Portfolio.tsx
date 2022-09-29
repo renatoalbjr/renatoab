@@ -35,8 +35,8 @@ const Portfolio: NextComponentType<NextPageContext, props, props> = () => {
         </div>
       </div>
 
-      <div className="w-full bg-transparent flex flex-row items-center">
-        <div className="pl-6 pr-24 w-fit">
+      <div className="w-full flex flex-row items-center backdrop-blur-sm">
+        <div className="pl-24 pr-6 w-fit">
           <h1 className="font-title text-4xl text-white mb-6">NLW #01</h1>
           <p className="font-body text-base text-white mb-6">
             I started learning about web development thanks to Rocketseat that

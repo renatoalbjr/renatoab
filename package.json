@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "transformSvgs": "node utils/transformSvgs.js"
   },
   "dependencies": {
     "@mdi/js": "^7.0.96",

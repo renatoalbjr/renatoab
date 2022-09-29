@@ -15,6 +15,10 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "utils/transformSvgs.js"],
+  "exclude": [
+    "node_modules",
+    "components/Icons/svgTemplateComponent.tsx",
+    "components/Icons/svgTemplateExport.tsx"
+  ]
 }
