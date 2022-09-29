@@ -1,7 +1,5 @@
 import { NextComponentType, NextPageContext } from "next";
-import Script from "next/script";
 import { HTMLProps } from "react";
-import initParticles from "../utils/particlesWrapper";
 
 interface props extends HTMLProps<HTMLElement> {}
 
@@ -11,18 +9,6 @@ const Intro: NextComponentType<NextPageContext, props, props> = ({
 }: props) => {
   return (
     <>
-      <Script
-        src="/particles.min.js"
-        id="particles"
-        onLoad={() =>
-          initParticles({
-            selector: ".background",
-            connectParticles: true,
-            color: ["#FFFFFF"],
-            minDistance: 120,
-          })
-        }
-      />
       <header
         className={"mx-24 my-auto w-full bg-transparent relative " + className}
         {...rest}
@@ -30,7 +16,7 @@ const Intro: NextComponentType<NextPageContext, props, props> = ({
         <h1
           className={
             "font-title text-4xl text-white " +
-            "after:absolute after:w-full after:rounded-full after:h-1 after:bg-primary after:block after:mt-6 "
+            "after:absolute after:w-full after:rounded-full after:h-1 after:bg-primary after:block after:mt-6"
           }
         >
           Hi, I&apos;m <span className="text-primary">Renato</span>,<br />a
@@ -47,7 +33,6 @@ const Intro: NextComponentType<NextPageContext, props, props> = ({
           Portfolio
         </a>
       </header>
-      <canvas className="background absolute -z-10 left-0">Background</canvas>
     </>
   );
 };

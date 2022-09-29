@@ -6,6 +6,7 @@ import AboutMe from "../components/AboutMe";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Intro from "../components/Intro";
+import ParticlesjsBackground from "../components/ParticlesjsBackground";
 import Portfolio from "../components/Portfolio";
 import Sidebar from "../components/Sidebar";
 
@@ -46,40 +47,37 @@ const Home: NextPage = () => {
       <Head>
         <title>Renato AB. | Software Developer</title>
       </Head>
+      <ParticlesjsBackground />
       <Sidebar
         navIDs={sections}
         navTitles={sections}
         navVisibleID={visibleSection}
-        className="scrollbar-thin "
+        className="scrollbar-thin scrollbar-track-base-100 scrollbar-thumb-base-300 items-stretch"
       >
         <section
           id="Intro"
-          className="flex items-center justify-center h-[100vh] flex-shrink-0 w-full"
+          className="flex items-center justify-center min-h-[100vh]"
         >
           <Intro />
         </section>
-        <section
-          id="Portfolio"
-          ref={portfolioRef}
-          className="flex-shrink-0 w-full"
-        >
+        <section id="Portfolio" ref={portfolioRef}>
           <Portfolio />
         </section>
         <section
           id="About Me"
           ref={aboutRef}
-          className="flex items-center justify-center flex-shrink-0 w-full"
+          className="flex items-center justify-center"
         >
           <AboutMe />
         </section>
         <section
           id="Contact"
           ref={contactRef}
-          className="flex items-center justify-center h-[1000px] flex-shrink-0 w-full bg-emerald-100"
+          className="bg-base-100 px-24 py-16"
         >
           <Contact />
         </section>
-        <div className="flex items-center justify-center h-[150px] flex-shrink-0 w-full bg-emerald-700">
+        <div className="flex items-center justify-center min-h-[150px] bg-emerald-700">
           <Footer />
         </div>
       </Sidebar>

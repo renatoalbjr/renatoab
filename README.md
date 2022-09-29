@@ -23,16 +23,22 @@ However, I'm also using it to practice and expand my knowledge about frontend de
 
 - [x] Create `Intro` section
 - [x] Create `Portfolio` section
-- [ ] Create `About Me` section
-- [ ] Create `Contact` section
-- [ ] Create projects routes
+- [x] Create `About Me` section
+- [x] Create `Contact` section
+- [ ] Create `Footer` section
+- [ ] Handle form submit
 - [ ] Create banner component to link projects to this website
+- [ ] Create projects routes
 - [ ] Translate projects to demos/previews inside this website
 - [ ] Review
 - [ ] Deploy to Vercel
 - [ ] Create a nice `README.md`
 
 ## Improvements
+
+### Index
+
+- [ ] Move sections to components
 
 ### Intro
 
@@ -42,3 +48,7 @@ However, I'm also using it to practice and expand my knowledge about frontend de
 
 - [ ] Use daisyUI card component to make the spotlighted project cards responsible
 - [ ] Replace next/image with [next/future/image](https://nextjs.org/docs/api-reference/next/future/image)
+
+### About Me
+
+- [ ] Make grid cells have a fixed height
