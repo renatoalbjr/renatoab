@@ -54,32 +54,12 @@ const Home: NextPage = () => {
         navVisibleID={visibleSection}
         className="scrollbar-thin scrollbar-track-base-100 scrollbar-thumb-base-300 items-stretch"
       >
-        <section
-          id="Intro"
-          className="flex items-center justify-center min-h-[100vh]"
-        >
-          <Intro />
-        </section>
-        <section id="Portfolio" ref={portfolioRef}>
-          <Portfolio />
-        </section>
-        <section
-          id="About Me"
-          ref={aboutRef}
-          className="flex items-center justify-center"
-        >
-          <AboutMe />
-        </section>
-        <section
-          id="Contact"
-          ref={contactRef}
-          className="bg-base-100 px-24 py-16"
-        >
-          <Contact />
-        </section>
-        <div className="flex items-center flex-col justify-between py-6 lg:flex-row lg:px-24 min-h-[150px] bg-base-300">
-          <Footer />
-        </div>
+        <Intro />
+        <Portfolio id="Portfolio" ref={portfolioRef} />
+        <AboutMe id="About Me" ref={aboutRef} />
+        <Contact id="Contact" ref={contactRef} />
+
+        <Footer />
       </Sidebar>
     </>
   );

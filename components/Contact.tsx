@@ -1,13 +1,14 @@
+/* eslint-disable react/display-name */
 import { NextComponentType, NextPageContext } from "next";
-import { HTMLProps } from "react";
+import React, { HTMLAttributes, HTMLProps } from "react";
 import { mdiGithub } from "@mdi/js";
 import Icon from "@mdi/react";
 
-interface props extends HTMLProps<HTMLDivElement> {}
+interface Props extends HTMLAttributes<HTMLElement> {}
 
-const Contact: NextComponentType<NextPageContext, props, props> = () => {
+const Contact = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
   return (
-    <>
+    <section ref={ref} className="bg-base-100 px-24 py-16" {...props}>
       <h1 className="font-title text-4xl text-primary">Get in touch</h1>
       <p className="text-white font-body text-base">
         This website is my resume, if you liked it and think that I could add
@@ -69,8 +70,8 @@ const Contact: NextComponentType<NextPageContext, props, props> = () => {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
-};
+});
 
 export default Contact;

@@ -1,12 +1,12 @@
-import { NextComponentType, NextPageContext } from "next";
+/* eslint-disable react/display-name */
 import Image from "next/image";
-import { HTMLProps } from "react";
+import React, { HTMLAttributes } from "react";
 
-interface props extends HTMLProps<HTMLDivElement> {}
+interface Props extends HTMLAttributes<HTMLElement> {}
 
-const Portfolio: NextComponentType<NextPageContext, props, props> = () => {
+const Portfolio = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
   return (
-    <>
+    <section ref={ref} {...props}>
       <div className="w-full bg-base-200 flex flex-row items-center">
         <div className="h-full w-full max-w-[24rem] leading-[0px]">
           <Image
@@ -84,8 +84,8 @@ const Portfolio: NextComponentType<NextPageContext, props, props> = () => {
           </a>
         </div>
       </div>
-    </>
+    </section>
   );
-};
+});
 
 export default Portfolio;
