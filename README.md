@@ -26,7 +26,7 @@ However, I'm also using it to practice and expand my knowledge about frontend de
 - [x] Create `About Me` section
 - [x] Create `Contact` section
 - [x] Create `Footer` section
-- [ ] Handle form submit
+- [x] Handle form submit
 - [ ] Create banner component to link projects to this website
 - [ ] Create projects routes
 - [ ] Translate projects to demos/previews inside this website
@@ -36,9 +36,11 @@ However, I'm also using it to practice and expand my knowledge about frontend de
 
 ## Improvements
 
+- [ ] Implement testing
+
 ### Index
 
-- [ ] Move sections to components
+- [x] Move sections to components
 
 ### Intro
 
@@ -52,3 +54,9 @@ However, I'm also using it to practice and expand my knowledge about frontend de
 ### About Me
 
 - [ ] Make grid cells have a fixed height
+
+### Contact
+
+- [ ] Create a cool success message
+- [ ] Create a workflow in Formium to handle the submission
+- [ ] Validate data

@@ -10,6 +10,7 @@
     "transformSvgs": "node utils/transformSvgs.js"
   },
   "dependencies": {
+    "@formium/client": "^0.1.4",
     "@mdi/js": "^7.0.96",
     "@mdi/react": "^1.6.1",
     "daisyui": "^2.31.0",

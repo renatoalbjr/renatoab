@@ -1,4 +1,5 @@
-import type { NextPage } from "next";
+import { Form } from "@formium/client";
+import type { GetStaticProps, NextPage, NextPageContext } from "next";
 import Head from "next/head";
 import { MutableRefObject, useEffect, useState } from "react";
 
@@ -11,6 +12,7 @@ import Portfolio from "../components/Portfolio";
 import Sidebar from "../components/Sidebar";
 
 import useElementOnScreen from "../hooks/useElementOnScreen";
+import { formium } from "../utils/formium";
 
 const sections = ["Intro", "Portfolio", "About Me", "Contact"];
 const options: IntersectionObserverInit = {
@@ -19,7 +21,11 @@ const options: IntersectionObserverInit = {
   threshold: 0.1,
 };
 
-const Home: NextPage = () => {
+interface Props {
+  form: Form;
+}
+
+const Home: NextPage<Props> = ({ form }: Props) => {
   const [portfolioRef, isPortfolioVisible] = useElementOnScreen(options) as [
     MutableRefObject<null>,
     boolean
@@ -57,7 +63,7 @@ const Home: NextPage = () => {
         <Intro />
         <Portfolio id="Portfolio" ref={portfolioRef} />
         <AboutMe id="About Me" ref={aboutRef} />
-        <Contact id="Contact" ref={contactRef} />
+        <Contact form={form} id="Contact" ref={contactRef} />
 
         <Footer />
       </Sidebar>
@@ -66,3 +72,12 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const form = await formium.getFormBySlug("portfolio-contact");
+  return {
+    props: {
+      form,
+    },
+  };
+};
