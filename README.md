@@ -27,16 +27,21 @@ However, I'm also using it to practice and expand my knowledge about frontend de
 - [x] Create `Contact` section
 - [x] Create `Footer` section
 - [x] Handle form submit
-- [ ] Create banner component to link projects to this website
-- [ ] Create projects routes
-- [ ] Translate projects to demos/previews inside this website
-- [ ] Review
+- [x] Review
+  - [x] Add links to tech stack
+  - [x] Replace _Certifications_ by _Education_
+  - [x] Move section description to _Education_
+  - [x] Make `Send` button round
+  - [x] Remove gradient from `Sidebar`
+  - [x] Create form submission success message
 - [ ] Deploy to Vercel
 - [ ] Create a nice `README.md`
 
 ## Improvements
 
 - [ ] Implement testing
+- [ ] Remove warnings about svgs tags
+- [ ] Animate elements when they first appear on screen
 
 ### Index
 
@@ -51,12 +56,7 @@ However, I'm also using it to practice and expand my knowledge about frontend de
 - [ ] Use daisyUI card component to make the spotlighted project cards responsible
 - [ ] Replace next/image with [next/future/image](https://nextjs.org/docs/api-reference/next/future/image)
 
-### About Me
-
-- [ ] Make grid cells have a fixed height
-
 ### Contact
 
-- [ ] Create a cool success message
 - [ ] Create a workflow in Formium to handle the submission
 - [ ] Validate data

@@ -2,8 +2,9 @@
 import { Form } from "@formium/client";
 import { mdiGithub } from "@mdi/js";
 import Icon from "@mdi/react";
-import React, { HTMLAttributes } from "react";
+import React, { HTMLAttributes, useState } from "react";
 import { formium } from "../utils/formium";
+import FormSuccess from "./FormSuccess";
 
 interface Props extends HTMLAttributes<HTMLElement> {
   form: Form;
@@ -11,12 +12,18 @@ interface Props extends HTMLAttributes<HTMLElement> {
 
 const Contact = React.forwardRef<HTMLElement, Props>(
   ({ form, ...props }, ref) => {
+    const [isSuccessVisible, setSuccessVisible] = useState(false);
+
+    function toggleSuccessVisible() {
+      setSuccessVisible(!isSuccessVisible);
+    }
+
     return (
       <section ref={ref} className="bg-base-100 px-24 py-16" {...props}>
         <h1 className="font-title text-4xl text-primary">Get in touch</h1>
         <p className="text-white font-body text-base">
-          This website is my resume, if you liked it and think that I could add
-          value to your team, please send me a message.
+          This website is my resume. If you think I could add value to your
+          team, please send me a message.
         </p>
         <div className="grid grid-cols-2 mt-8">
           <form
@@ -26,7 +33,7 @@ const Contact = React.forwardRef<HTMLElement, Props>(
               event.preventDefault();
               const formData = new FormData(event.currentTarget);
               await formium.submitForm("portfolio-contact", formData);
-              alert("Success");
+              toggleSuccessVisible();
             }}
           >
             <div className="grid grid-cols-2 gap-4">
@@ -64,7 +71,7 @@ const Contact = React.forwardRef<HTMLElement, Props>(
               />
             </div>
             <button
-              className="btn btn-primary mt-4 max-w-fit self-end"
+              className="btn btn-primary mt-4 max-w-fit self-end rounded-full px-8"
               type="submit"
             >
               Send
@@ -83,6 +90,11 @@ const Contact = React.forwardRef<HTMLElement, Props>(
             </div>
           </div>
         </div>
+        {isSuccessVisible ? (
+          <FormSuccess closeCallback={toggleSuccessVisible} />
+        ) : (
+          ""
+        )}
       </section>
     );
   }

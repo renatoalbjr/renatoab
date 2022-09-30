@@ -58,7 +58,7 @@ const Home: NextPage<Props> = ({ form }: Props) => {
         navIDs={sections}
         navTitles={sections}
         navVisibleID={visibleSection}
-        className="scrollbar-thin scrollbar-track-base-100 scrollbar-thumb-base-300 items-stretch"
+        className="scrollbar-thin scrollbar-track-base-100 scrollbar-thumb-base-300 items-stretch selection:bg-primary/70 relative"
       >
         <Intro />
         <Portfolio id="Portfolio" ref={portfolioRef} />

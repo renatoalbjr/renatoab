@@ -56,7 +56,7 @@ const Sidebar: NextComponentType<NextPageContext, props, props> = ({
                     (navVisibleID === undefined
                       ? "py-0 text-base-content/50"
                       : ("before:content-[''] before:bg-base-300 before:hover:bg-white/50 before:absolute before:bottom-0 before:right-0 before:w-full before:rounded-full before:h-[3px] " +
-                        "after:content-[''] after:bg-primary2BaseGradient after:absolute after:bottom-0 after:right-0 after:rounded-full after:h-[3px] after:ease-linear after:duration-200 " +
+                        "after:content-[''] after:bg-primary after:absolute after:bottom-0 after:right-0 after:rounded-full after:h-[3px] after:ease-linear after:duration-200 " +
                         (navVisibleID === id ? "after:w-full font-bold text-white " : "after:w-0 text-base-content/50")
                         )
                     )

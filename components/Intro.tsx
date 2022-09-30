@@ -26,12 +26,12 @@ const Intro: NextComponentType<NextPageContext, props, props> = ({
           Software Developer.
         </h1>
         <p className="font-body text-white text-lg font-normal mt-[3.25rem]">
-          Here you can learn more about me and check out the projects in my
+          Here you can learn more about me and check out projects in my
           portfolio.
         </p>
         <a
           href="#Portfolio"
-          className="btn btn-outline btn-primary rounded-full text-lg font-medium font-title mt-8 h-fit py-4 px-8"
+          className="btn btn-primary rounded-full text-lg font-medium font-title mt-8 h-fit py-4 px-8"
         >
           Portfolio
         </a>
