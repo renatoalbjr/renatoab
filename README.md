@@ -34,6 +34,8 @@ However, I'm also using it to practice and expand my knowledge about frontend de
   - [x] Make `Send` button round
   - [x] Remove gradient from `Sidebar`
   - [x] Create form submission success message
+  - [x] Update email
+  - [x] Update socials
 - [ ] Deploy to Vercel
 - [ ] Create a nice `README.md`
 

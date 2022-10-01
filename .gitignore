@@ -36,3 +36,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# help scripts and unused files
+components/Icons/*
+!components/Icons/MyIcons.tsx

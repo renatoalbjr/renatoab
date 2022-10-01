@@ -5,6 +5,7 @@ import Icon from "@mdi/react";
 import React, { HTMLAttributes, useState } from "react";
 import { formium } from "../utils/formium";
 import FormSuccess from "./FormSuccess";
+import { DiscordLogo } from "./Icons/MyIcons";
 
 interface Props extends HTMLAttributes<HTMLElement> {
   form: Form;
@@ -13,6 +14,7 @@ interface Props extends HTMLAttributes<HTMLElement> {
 const Contact = React.forwardRef<HTMLElement, Props>(
   ({ form, ...props }, ref) => {
     const [isSuccessVisible, setSuccessVisible] = useState(false);
+    const [discordCopied, setDiscordCopied] = useState(false);
 
     function toggleSuccessVisible() {
       setSuccessVisible(!isSuccessVisible);
@@ -80,13 +82,30 @@ const Contact = React.forwardRef<HTMLElement, Props>(
           <div className="pl-6 border-l border-primary ml-6">
             <h2 className="text-white font-title text-2xl">Email</h2>
             <a className="block mb-8 mt-2" href="mailto:rejunior147@gmail.com">
-              rejunior147@gmail.com
+              renato.albjr@gmail.com
             </a>
             <h2 className="text-white font-title text-2xl">Socials</h2>
             <div className="flex flex-row gap-2 mt-2">
               <a href="https://github.com/renatoalbjr">
                 <Icon path={mdiGithub} className="h-6 w-6" />
               </a>
+              <div
+                className="tooltip tooltip-bottom tooltip-primary"
+                data-tip={discordCopied ? "copied!" : "copy to clipboard"}
+              >
+                <button
+                  onClick={async () => {
+                    if (typeof navigator !== "undefined") {
+                      if (typeof navigator.clipboard !== "undefined")
+                        navigator.clipboard.writeText("Barbosa#6814");
+                      setDiscordCopied(true);
+                      setTimeout(() => setDiscordCopied(false), 1000);
+                    }
+                  }}
+                >
+                  <DiscordLogo className="h-6 w-6" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
