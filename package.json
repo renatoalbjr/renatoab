@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "transformSvgs": "node utils/transformSvgs.js"
+    "transformSvgs": "node utils/cli/transformSvgs.js"
   },
   "dependencies": {
     "@formium/client": "^0.1.4",
