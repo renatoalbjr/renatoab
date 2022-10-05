@@ -7,6 +7,7 @@ interface Props extends HTMLAttributes<HTMLElement> {}
 const Portfolio = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
   return (
     <section ref={ref} {...props}>
+      {/* 1st Spotlight */}
       <div className="card lg:card-side w-full bg-base-200 rounded-none relative">
         <figure className="relative h-96 w-full lg:w-2/3">
           <Image

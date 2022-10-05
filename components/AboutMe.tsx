@@ -84,10 +84,15 @@ interface Props extends HTMLAttributes<HTMLElement> {}
 
 const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
   return (
-    <section ref={ref} className="flex items-center justify-center" {...props}>
-      <main className="px-24 py-16 backdrop-blur-sm w-full">
+    <section
+      ref={ref}
+      className="flex items-center justify-center backdrop-blur-sm"
+      {...props}
+    >
+      <main className="px-6 lg:px-24 py-16 w-full">
         <h1 className="text-4xl font-title text-primary">About Me</h1>
-        <div className="grid grid-cols-2 w-full rounded-lg border border-white overflow-hidden mt-8">
+        <div className="flex flex-col md:grid md:grid-cols-2 md:grid-rows-2 w-full rounded-lg border border-white overflow-hidden mt-8">
+          {/* Knowledge */}
           <section className="p-4 border border-white pb-6">
             <h1 className="font-title text-2xl text-white mt-4">
               <Icon
@@ -118,6 +123,7 @@ const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
             </div>
           </section>
 
+          {/* Education */}
           <section className="p-4 border border-white pb-6">
             <h1 className="font-title text-2xl text-white mt-4">
               <Icon
@@ -140,6 +146,7 @@ const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
             </p>
           </section>
 
+          {/* History */}
           <section className="p-4 border border-white pb-6">
             <h1 className="font-title text-2xl text-white mt-4">
               <Icon
@@ -156,6 +163,7 @@ const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
             </p>
           </section>
 
+          {/* Location */}
           <section className="p-4 border border-white pb-6">
             <h1 className="font-title text-2xl text-white mt-4">
               <Icon
