@@ -81,7 +81,7 @@ const Contact = React.forwardRef<HTMLElement, Props>(
           </form>
           <div className="pl-6 border-l border-primary ml-6">
             <h2 className="text-white font-title text-2xl">Email</h2>
-            <a className="block mb-8 mt-2" href="mailto:rejunior147@gmail.com">
+            <a className="block mb-8 mt-2" href="mailto:renato.albjr@gmail.com">
               renato.albjr@gmail.com
             </a>
             <h2 className="text-white font-title text-2xl">Socials</h2>

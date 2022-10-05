@@ -41,3 +41,4 @@ next-env.d.ts
 components/Icons/*
 !components/Icons/MyIcons.tsx
 utils/cli/*
+*.Identifier
