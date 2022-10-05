@@ -8,8 +8,8 @@ const Portfolio = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
   return (
     <section ref={ref} {...props}>
       {/* 1st Spotlight */}
-      <div className="card lg:card-side w-full bg-base-200 rounded-none relative">
-        <figure className="relative h-96 w-full lg:w-2/3">
+      <div className="card lg:flex-row w-full bg-base-200 rounded-none relative">
+        <figure className="relative h-96 lg:h-auto w-full lg:w-[40%] lg:shrink-0">
           <Image
             src="/images/nlw-spotlight-2.png"
             alt=""
@@ -41,7 +41,7 @@ const Portfolio = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
 
       {/* 2nd Spotlight */}
       <div className="card lg:card-side w-full bg-base-200 lg:bg-transparent lg:backdrop-blur-sm rounded-none relative lg:flex-row-reverse">
-        <figure className="relative h-96 w-full lg:w-2/3">
+        <figure className="relative h-96 lg:h-auto w-full lg:w-[40%] lg:shrink-0">
           <Image
             src="/images/nlw-ecoleta-spotlight-2.png"
             alt=""
@@ -73,7 +73,7 @@ const Portfolio = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
 
       {/* 3rd Spotlight */}
       <div className="card lg:card-side w-full bg-base-200 rounded-none relative">
-        <figure className="relative h-96 w-full lg:w-2/3">
+        <figure className="relative h-96 lg:h-auto w-full lg:w-[40%] lg:shrink-0">
           <Image
             src="/images/nlw-esports-spotlight-2.jpg"
             alt=""
