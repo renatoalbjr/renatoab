@@ -31,7 +31,7 @@ const Sidebar: NextComponentType<NextPageContext, props, props> = ({
         {/* <!-- Page content here --> */}
         <label
           htmlFor="my-drawer-2"
-          className="btn btn-primary drawer-button lg:hidden absolute left-2 top-2 z-10"
+          className="btn btn-primary drawer-button lg:hidden fixed left-2 top-2 z-10"
         >
           <Icon path={mdiMenu} className="text-white h-6" />
         </label>

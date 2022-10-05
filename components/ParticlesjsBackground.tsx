@@ -10,14 +10,16 @@ const ParticlesjsBackground: NextComponentType = () => {
         id="particles"
         onLoad={() =>
           initParticles({
-            selector: ".background",
+            selector: ".particlesBackground",
             connectParticles: true,
             color: ["#FFFFFF"],
             minDistance: 120,
           })
         }
       />
-      <canvas className="background absolute -z-10 left-0">Background</canvas>
+      <canvas className="particlesBackground fixed -z-10 w-screen h-screen">
+        Background
+      </canvas>
     </>
   );
 };
