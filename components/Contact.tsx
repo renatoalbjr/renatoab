@@ -21,13 +21,17 @@ const Contact = React.forwardRef<HTMLElement, Props>(
     }
 
     return (
-      <section ref={ref} className="bg-base-100 px-24 py-16" {...props}>
+      <section
+        ref={ref}
+        className="bg-base-100 px-6 md:px-12 lg:px-24 py-16"
+        {...props}
+      >
         <h1 className="font-title text-4xl text-primary">Get in touch</h1>
         <p className="text-white font-body text-base">
           This website is my resume. If you think I could add value to your
           team, please send me a message.
         </p>
-        <div className="grid grid-cols-2 mt-8">
+        <div className="md:grid md:grid-cols-2 mt-8">
           <form
             className="form-control"
             action=""
@@ -79,7 +83,7 @@ const Contact = React.forwardRef<HTMLElement, Props>(
               Send
             </button>
           </form>
-          <div className="pl-6 border-l border-primary ml-6">
+          <div className="mt-10 pt-10 border-t md:mt-0 md:pt-0 md:border-t-0 md:pl-6 md:border-l border-primary md:ml-6">
             <h2 className="text-white font-title text-2xl">Email</h2>
             <a className="block mb-8 mt-2" href="mailto:renato.albjr@gmail.com">
               renato.albjr@gmail.com

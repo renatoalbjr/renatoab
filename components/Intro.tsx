@@ -13,7 +13,9 @@ const Intro: NextComponentType<NextPageContext, props, props> = ({
       className="flex items-center justify-center min-h-[100vh]"
     >
       <header
-        className={"mx-24 my-auto w-full bg-transparent relative " + className}
+        className={
+          "mx-12 lg:mx-24 my-auto w-full bg-transparent relative " + className
+        }
         {...rest}
       >
         <h1
