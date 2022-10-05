@@ -10,12 +10,15 @@ import {
 } from "../components/Icons/MyIcons";
 import {
   mdiBookOutline,
+  mdiChevronLeft,
+  mdiChevronRight,
   mdiHistory,
   mdiMapMarkerOutline,
   mdiSchoolOutline,
 } from "@mdi/js";
 import Icon from "@mdi/react";
-import React, { HTMLAttributes } from "react";
+import React, { HTMLAttributes, MutableRefObject } from "react";
+import useElementOnScreen from "../hooks/useElementOnScreen";
 
 const abilities = [
   {
@@ -83,6 +86,18 @@ const abilities = [
 interface Props extends HTMLAttributes<HTMLElement> {}
 
 const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
+  const abilitiesIOOptions: IntersectionObserverInit = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1,
+  };
+  const [firstAbilityRef, isFirstAbilityVisible] = useElementOnScreen(
+    abilitiesIOOptions
+  ) as [MutableRefObject<null>, boolean];
+  const [lastAbilityRef, isLastAbilityVisible] = useElementOnScreen(
+    abilitiesIOOptions
+  ) as [MutableRefObject<null>, boolean];
+
   return (
     <section
       ref={ref}
@@ -105,21 +120,42 @@ const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
               I know the technologies that I used to create this website and the
               projects in my portfolio, including:
             </p>
-            <div className="flex flex-row items-center gap-6 mt-6 pb-6 mx-8 overflow-x-auto snap-x scrollbar-thin">
-              {abilities.map(({ title, icon, link }) => {
-                return (
-                  <a
-                    className="flex flex-col items-center gap-2 snap-center group"
-                    key={title}
-                    href={link}
-                  >
-                    {icon}
-                    <span className="font-body truncate text-sm text-white group-hover:text-white/50">
-                      {title}
-                    </span>
-                  </a>
-                );
-              })}
+            <div className="relative w-full flex items-center">
+              <Icon
+                path={mdiChevronLeft}
+                className={`${
+                  isFirstAbilityVisible ? "invisible " : " "
+                } w-12 h-12 text-white`}
+              />
+              <div className="flex flex-row items-center gap-6 mt-6 pb-6 pr-6 overflow-x-scroll scrollbar-thin">
+                {abilities.map(({ title, icon, link }, index) => {
+                  return (
+                    <a
+                      className="flex flex-col items-center gap-2 group"
+                      key={title}
+                      href={link}
+                      ref={
+                        index === 0
+                          ? firstAbilityRef
+                          : index === abilities.length - 1
+                          ? lastAbilityRef
+                          : null
+                      }
+                    >
+                      {icon}
+                      <span className="font-body truncate text-sm text-white group-hover:text-white/50">
+                        {title}
+                      </span>
+                    </a>
+                  );
+                })}
+              </div>
+              <Icon
+                path={mdiChevronRight}
+                className={`${
+                  isLastAbilityVisible ? "invisible " : " "
+                } w-12 h-12 text-white `}
+              />
             </div>
           </section>
 
