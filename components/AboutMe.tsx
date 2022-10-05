@@ -94,10 +94,10 @@ const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
         <div className="flex flex-col md:grid md:grid-cols-2 md:grid-rows-2 w-full rounded-lg border border-white overflow-hidden mt-8">
           {/* Knowledge */}
           <section className="p-4 border border-white pb-6">
-            <h1 className="font-title text-2xl text-white mt-4">
+            <h1 className="font-title text-2xl text-white mt-4 flex items-center gap-2">
               <Icon
                 path={mdiBookOutline}
-                className="w-12 h-12 m-2 text-primary inline"
+                className="w-12 h-12 m-2 text-primary "
               />
               Knowledge and skills
             </h1>
@@ -125,10 +125,10 @@ const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
 
           {/* Education */}
           <section className="p-4 border border-white pb-6">
-            <h1 className="font-title text-2xl text-white mt-4">
+            <h1 className="font-title text-2xl text-white mt-4 flex items-center gap-2">
               <Icon
                 path={mdiSchoolOutline}
-                className="w-12 h-12 m-2 text-primary inline"
+                className="w-12 h-12 m-2 text-primary "
               />
               Education
             </h1>
@@ -148,11 +148,8 @@ const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
 
           {/* History */}
           <section className="p-4 border border-white pb-6">
-            <h1 className="font-title text-2xl text-white mt-4">
-              <Icon
-                path={mdiHistory}
-                className="w-12 h-12 m-2 text-primary inline"
-              />
+            <h1 className="font-title text-2xl text-white mt-4 flex items-center gap-2">
+              <Icon path={mdiHistory} className="w-12 h-12 m-2 text-primary " />
               Work History
             </h1>
             <p className="font-body text-base text-white mt-4">
@@ -165,10 +162,10 @@ const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
 
           {/* Location */}
           <section className="p-4 border border-white pb-6">
-            <h1 className="font-title text-2xl text-white mt-4">
+            <h1 className="font-title text-2xl text-white mt-4 flex items-center gap-2">
               <Icon
                 path={mdiMapMarkerOutline}
-                className="w-12 h-12 m-2 text-primary inline"
+                className="w-12 h-12 m-2 text-primary "
               />
               Where do I work from
             </h1>
