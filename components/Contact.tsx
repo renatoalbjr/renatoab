@@ -2,6 +2,7 @@
 import { Form } from "@formium/client";
 import { mdiGithub } from "@mdi/js";
 import Icon from "@mdi/react";
+import { useTranslation } from "next-i18next";
 import React, { HTMLAttributes, useState } from "react";
 import { formium } from "../utils/formium";
 import FormSuccess from "./FormSuccess";
@@ -20,17 +21,18 @@ const Contact = React.forwardRef<HTMLElement, Props>(
       setSuccessVisible(!isSuccessVisible);
     }
 
+    const { t } = useTranslation();
+
     return (
       <section
         ref={ref}
         className="bg-base-100 px-6 md:px-12 lg:px-24 py-16"
         {...props}
       >
-        <h1 className="font-title text-4xl text-primary">Get in touch</h1>
-        <p className="text-white font-body text-base">
-          This website is my resume. If you think I could add value to your
-          team, please send me a message.
-        </p>
+        <h1 className="font-title text-4xl text-primary">
+          {t("contact.title")}
+        </h1>
+        <p className="text-white font-body text-base">{t("contact.text")}</p>
         <div className="md:grid md:grid-cols-2 mt-8">
           <form
             className="form-control"
@@ -45,7 +47,9 @@ const Contact = React.forwardRef<HTMLElement, Props>(
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label className="label" htmlFor="Name">
-                  <span className="label-text font-title text-2xl">Name</span>
+                  <span className="label-text font-title text-2xl">
+                    {t("contact.name")}
+                  </span>
                 </label>
                 <input
                   id="Name"
@@ -56,7 +60,9 @@ const Contact = React.forwardRef<HTMLElement, Props>(
               </div>
               <div>
                 <label className="label" htmlFor="Email">
-                  <span className="label-text font-title text-2xl">Email</span>
+                  <span className="label-text font-title text-2xl">
+                    {t("contact.email")}
+                  </span>
                 </label>
                 <input
                   id="Email"
@@ -68,7 +74,9 @@ const Contact = React.forwardRef<HTMLElement, Props>(
             </div>
             <div>
               <label className="label" htmlFor="Message">
-                <span className="label-text font-title text-2xl">Message</span>
+                <span className="label-text font-title text-2xl">
+                  {t("contact.message")}
+                </span>
               </label>
               <textarea
                 id="Message"
@@ -80,22 +88,30 @@ const Contact = React.forwardRef<HTMLElement, Props>(
               className="btn btn-primary mt-4 max-w-fit self-end rounded-full px-8"
               type="submit"
             >
-              Send
+              {t("contact.send")}
             </button>
           </form>
           <div className="mt-10 pt-10 border-t md:mt-0 md:pt-0 md:border-t-0 md:pl-6 md:border-l border-primary md:ml-6">
-            <h2 className="text-white font-title text-2xl">Email</h2>
+            <h2 className="text-white font-title text-2xl">
+              {t("contact.email")}
+            </h2>
             <a className="block mb-8 mt-2" href="mailto:renato.albjr@gmail.com">
               renato.albjr@gmail.com
             </a>
-            <h2 className="text-white font-title text-2xl">Socials</h2>
+            <h2 className="text-white font-title text-2xl">
+              {t("contact.socials")}
+            </h2>
             <div className="flex flex-row gap-2 mt-2">
               <a href="https://github.com/renatoalbjr">
                 <Icon path={mdiGithub} className="h-6 w-6" />
               </a>
               <div
                 className="tooltip tooltip-bottom tooltip-primary"
-                data-tip={discordCopied ? "copied!" : "copy to clipboard"}
+                data-tip={
+                  discordCopied
+                    ? t("contact.discord_copied")
+                    : t("contact.discord_copy")
+                }
               >
                 <button
                   onClick={async () => {

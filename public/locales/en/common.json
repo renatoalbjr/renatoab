@@ -1,0 +1,70 @@
+{
+  "title": "Renato AB. | Software Developer",
+  "Portfolio": "Portfolio",
+  "Learn_more": "Learn more",
+  "Github": "Github",
+  "intro": {
+    "line_1": "Hi, I'm",
+    "line_2": "a Software Developer",
+    "p": "Here you can learn more about me and check out projects in my portfolio."
+  },
+  "spotlight_1": {
+    "title": "Rocketseat NLWs",
+    "text": "Rocketseat is a coding school. Periodically they organize an event called Next Level Week (NLW). During the event, we code a web-based application using the latest technologies. I loved the tech stack used during the event. It got me interested in learning web development."
+  },
+  "spotlight_2": {
+    "title": "NLW #01",
+    "text": "The first NLW brought a project about recycling material. We created a website where people could register recyclable material collection points. We also developed an app to list the closest points and the materials they collect."
+  },
+  "spotlight_3": {
+    "title": "NLW eSports",
+    "text": "In this project, we've developed a web interface and a mobile app that connects users searching for a partner to play a game. Using React and React Native for the front end and Express for the back end."
+  },
+  "About_Me": "About Me",
+  "about_1": {
+    "title": "Knowledge and skills",
+    "text": "I know the technologies that I used to create this website and the projects in my portfolio, including:"
+  },
+  "about_2": {
+    "title": "Education",
+    "text": {
+      "1": "At the moment, I'm working on my bachelor's Degree in Computer Science at Universidade Federal de Goiás (UFG). During my graduation, I earned the ",
+      "2": "Outstanding First-year Student Prize",
+      "3": " in 2018 and completed ",
+      "4": "Scientific Initiation",
+      "5": " in ",
+      "6": "Graph Theory",
+      "7": " the following year."
+    }
+  },
+  "about_3": {
+    "title": "Work History",
+    "text": "I'm currently looking for my first job. I want opportunities to expand my knowledge and skills in my fields of interest. I'm curious, willing, and passionate about technology and business."
+  },
+  "about_4": {
+    "title": "Where do I work from",
+    "text": "I'm working from Goiânia, GO - Brazil. Since my graduation is in Goiânia, I'm only open to remote opportunities or offices located here."
+  },
+  "contact": {
+    "title": "Get in touch",
+    "text": "This website is my resume. If you think I could add value to your team, please send me a message.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "socials": "Socials",
+    "discord_copy": "Copy to clipboard",
+    "discord_copied": "Copied!"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "background": "Animated Background: ",
+    "inspiration": "Design inspiration: "
+  },
+  "sections": {
+    "intro": "Intro",
+    "portfolio": "Portfolio",
+    "about": "About Me",
+    "contact": "Contact"
+  }
+}

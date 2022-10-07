@@ -19,6 +19,7 @@ import {
 import Icon from "@mdi/react";
 import React, { HTMLAttributes, MutableRefObject } from "react";
 import useElementOnScreen from "../hooks/useElementOnScreen";
+import { useTranslation } from "next-i18next";
 
 const abilities = [
   {
@@ -98,6 +99,8 @@ const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
     abilitiesIOOptions
   ) as [MutableRefObject<null>, boolean];
 
+  const { t } = useTranslation("common");
+
   return (
     <section
       ref={ref}
@@ -105,7 +108,7 @@ const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
       {...props}
     >
       <main className="px-6 lg:px-24 py-16 w-full">
-        <h1 className="text-4xl font-title text-primary">About Me</h1>
+        <h1 className="text-4xl font-title text-primary">{t("About_Me")}</h1>
         <div className="flex flex-col md:grid md:grid-cols-2 md:grid-rows-2 w-full rounded-lg border border-white overflow-hidden mt-8">
           {/* Knowledge */}
           <section className="p-4 border border-white pb-6">
@@ -114,11 +117,10 @@ const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
                 path={mdiBookOutline}
                 className="w-12 h-12 m-2 text-primary "
               />
-              Knowledge and skills
+              {t("about_1.title")}
             </h1>
             <p className="font-body text-base text-white mt-4">
-              I know the technologies that I used to create this website and the
-              projects in my portfolio, including:
+              {t("about_1.text")}
             </p>
             <div className="relative w-full flex items-center">
               <Icon
@@ -166,19 +168,16 @@ const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
                 path={mdiSchoolOutline}
                 className="w-12 h-12 m-2 text-primary "
               />
-              Education
+              {t("about_2.title")}
             </h1>
             <p className="font-body text-base text-white mt-4">
-              At the moment, I&apos;m working on my bachelor&apos;s Degree in
-              Computer Science at Universidade Federal de Goiás (UFG). During my
-              graduation, I earned the{" "}
-              <span className="text-primary">
-                Outstanding First-year Student Prize
-              </span>{" "}
-              in 2018 and completed{" "}
-              <span className="text-primary">Scientific Initiation</span> in{" "}
-              <span className="text-primary">Graph Theory</span> the following
-              year.
+              {t("about_2.text.1")}
+              <span className="text-primary">{t("about_2.text.2")}</span>
+              {t("about_2.text.3")}
+              <span className="text-primary">{t("about_2.text.4")}</span>
+              {t("about_2.text.5")}
+              <span className="text-primary">{t("about_2.text.6")}</span>
+              {t("about_2.text.7")}
             </p>
           </section>
 
@@ -186,13 +185,10 @@ const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
           <section className="p-4 border border-white pb-6">
             <h1 className="font-title text-2xl text-white mt-4 flex items-center gap-2">
               <Icon path={mdiHistory} className="w-12 h-12 m-2 text-primary " />
-              Work History
+              {t("about_3.title")}
             </h1>
             <p className="font-body text-base text-white mt-4">
-              I&apos;m currently looking for my first job. I want opportunities
-              to expand my knowledge and skills in my fields of interest.
-              I&apos;m curious, willing, and passionate about technology and
-              business.
+              {t("about_3.text")}
             </p>
           </section>
 
@@ -203,12 +199,10 @@ const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
                 path={mdiMapMarkerOutline}
                 className="w-12 h-12 m-2 text-primary "
               />
-              Where do I work from
+              {t("about_4.title")}
             </h1>
             <p className="font-body text-base text-white mt-4">
-              I&apos;m working from Goiânia, GO - Brazil. Since my graduation is
-              in Goiânia, I&apos;m only open to remote opportunities or offices
-              located here.
+              {t("about_4.text")}
             </p>
           </section>
         </div>

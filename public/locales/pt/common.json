@@ -1,0 +1,70 @@
+{
+  "title": "Renato AB. | Desenvolvedor",
+  "Portfolio": "Portfólio",
+  "Learn_more": "Saiba mais",
+  "Github": "Github",
+  "intro": {
+    "line_1": "Oi, me chamo",
+    "line_2": "sou um Desenvolvedor",
+    "p": "Aqui você pode me conhecer melhor e conferir os projetos no meu portfólio."
+  },
+  "spotlight_1": {
+    "title": "NLWs da Rocketseat",
+    "text": "Rocketseat é uma escola de programação. Periodicamente eles organizam um evento chamado Next Level Week (NLW). Durante o evento, nós desenvolvemos uma aplicação web usando as tecnologias mais recentes. Eu gostei muito da stack utilizada no evento e isso me despertou o interesse pelo desenvolvimento web."
+  },
+  "spotlight_2": {
+    "title": "NLW #01",
+    "text": "O Primeiro projeto da NLW foi sobre reciclagem. Nós criamos um site onde as pessoas poderiam registrar pontos de coleta. Para acompanhar o site, desenvolvemos um app que lista os pontos de coleta mais próximos do usuário, e os materiais que ele coleta."
+  },
+  "spotlight_3": {
+    "title": "NLW eSports",
+    "text": "Neste projeto nós desenvolvemos uma interface web e um aplicativo que conecta usuários procurando parceiros de jogo. Usamos React e React Native para o front end e Express para o back end."
+  },
+  "About_Me": "Sobre mim",
+  "about_1": {
+    "title": "Conhecimento e Habilidades",
+    "text": "Eu conheço as tecnologias usada para criar este site e os projetos no meu portfólio, incluindo:"
+  },
+  "about_2": {
+    "title": "Educação",
+    "text": {
+      "1": "Estou cursando Ciência da Computação na Universidade Federal de Goiás (UFG). Durante a graduação eu conquistei o ",
+      "2": "Prêmio Calouro Destaque",
+      "3": " em 2018, e completei minha ",
+      "4": "Iniciação Científica",
+      "5": " em ",
+      "6": "Teoria dos Grafos",
+      "7": " no ano seguinte."
+    }
+  },
+  "about_3": {
+    "title": "Histórico de Trabalho",
+    "text": "Estou procurando meu primeiro emprego. Procuro oportunidades de expandir meus conhecimentos e habilidades em áreas de meu interesse. Sou curioso, motivado e apaixonado por tecnologia e negócios."
+  },
+  "about_4": {
+    "title": "De onde eu trabalho",
+    "text": "Estou trabalhando em Goiânia, GO. Como minha graduação é em Goiânia, só posso aceitar propostas de trabalho remoto ou de escritórios localizados aqui."
+  },
+  "contact": {
+    "title": "Entre em contato",
+    "text": "Esse website é meu currículo. Se você gostou e acredita que eu serei uma boa adição a sua equipe, me envie uma mensagem.",
+    "name": "Nome",
+    "email": "Email",
+    "message": "Mensagem",
+    "send": "Enviar",
+    "socials": "Links",
+    "discord_copy": "Copiar usuário",
+    "discord_copied": "Copiado!"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados.",
+    "background": "Animação de fundo: ",
+    "inspiration": "Inspiração: "
+  },
+  "sections": {
+    "intro": "Introdução",
+    "portfolio": "Portfólio",
+    "about": "Sobre mim",
+    "contact": "Contato"
+  }
+}

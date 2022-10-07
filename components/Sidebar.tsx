@@ -2,6 +2,8 @@ import { NextComponentType, NextPageContext } from "next";
 import { HTMLProps } from "react";
 import { Icon } from "@mdi/react";
 import { mdiMenu } from "@mdi/js";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 interface props extends HTMLProps<HTMLDivElement> {
   navIDs: string[];
@@ -17,6 +19,7 @@ const Sidebar: NextComponentType<NextPageContext, props, props> = ({
   className,
   ...rest
 }: props) => {
+  // const {pathname, asPath, locale} = useRouter();
   return (
     <div className="drawer drawer-mobile">
       <input
@@ -49,21 +52,22 @@ const Sidebar: NextComponentType<NextPageContext, props, props> = ({
             return (
               <li key={id} className="relative w-full mb-4">
                 {/* prettier-ignore */}
-                <a
-                  href={`/#${id}`}
-                  className={
-                    "text-lg uppercase font-title hover:text-white py-4 block text-right " +
-                    (navVisibleID === undefined
-                      ? "py-0 text-base-content/50"
-                      : ("before:content-[''] before:bg-base-300 before:hover:bg-white/50 before:absolute before:bottom-0 before:right-0 before:w-full before:rounded-full before:h-[3px] " +
-                        "after:content-[''] after:bg-primary after:absolute after:bottom-0 after:right-0 after:rounded-full after:h-[3px] after:ease-linear after:duration-200 " +
-                        (navVisibleID === id ? "after:w-full font-bold text-white " : "after:w-0 text-base-content/50")
-                        )
-                    )
-                  }
-                >
-                  {navTitles[index]}
-                </a>
+                <Link href={`/#${id}`}>
+                  <a
+                    className={
+                      "text-lg uppercase font-title hover:text-white py-4 block text-right " +
+                      (navVisibleID === undefined
+                        ? "py-0 text-base-content/50"
+                        : ("before:content-[''] before:bg-base-300 before:hover:bg-white/50 before:absolute before:bottom-0 before:right-0 before:w-full before:rounded-full before:h-[3px] " +
+                          "after:content-[''] after:bg-primary after:absolute after:bottom-0 after:right-0 after:rounded-full after:h-[3px] after:ease-linear after:duration-200 " +
+                          (navVisibleID === id ? "after:w-full font-bold text-white " : "after:w-0 text-base-content/50")
+                          )
+                      )
+                    }
+                  >
+                    {navTitles[index]}
+                  </a>
+                </Link>
               </li>
             );
           })}
