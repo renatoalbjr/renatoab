@@ -4,6 +4,7 @@ import { Icon } from "@mdi/react";
 import { mdiMenu } from "@mdi/js";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import LanguageDropdown from "./LanguageDropdown";
 
 interface props extends HTMLProps<HTMLDivElement> {
   navIDs: string[];
@@ -45,8 +46,9 @@ const Sidebar: NextComponentType<NextPageContext, props, props> = ({
           htmlFor="my-drawer-2"
           className="drawer-overlay !bg-black/50"
         ></label>
-        <ol className="px-12 min-w-max w-[20vw] max-w-xl bg-base-200 text-base-content flex flex-col justify-center">
+        <ol className="px-12 min-w-max w-[20vw] max-w-xl bg-base-200 text-base-content flex flex-col justify-center relative">
           {/* <!-- Sidebar content here --> */}
+          <LanguageDropdown className="absolute top-4 right-4" />
           {navIDs.map((id, index) => {
             if (navTitles.length <= index) return;
             return (

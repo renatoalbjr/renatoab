@@ -5,7 +5,7 @@
 module.exports = {
   i18n: {
     defaultLocale: "en",
-    locales: ["en", "pt"],
+    locales: ["en", "pt-BR"],
     // localePath, //if Vercel fails to build
   },
   // localePath,

@@ -41,7 +41,6 @@ const Home: NextPage<Props> = ({ form }: Props) => {
     boolean
   ];
 
-  const { locale } = useRouter();
   const { t } = useTranslation("common");
 
   const sections = useMemo(
