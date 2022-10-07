@@ -4,9 +4,9 @@ import { mdiGithub } from "@mdi/js";
 import Icon from "@mdi/react";
 import { useTranslation } from "next-i18next";
 import React, { HTMLAttributes, useState } from "react";
+import { siDiscord } from "simple-icons/icons";
 import { formium } from "../utils/formium";
 import FormSuccess from "./FormSuccess";
-import { DiscordLogo } from "./Icons/MyIcons";
 
 interface Props extends HTMLAttributes<HTMLElement> {
   form: Form;
@@ -123,7 +123,10 @@ const Contact = React.forwardRef<HTMLElement, Props>(
                     }
                   }}
                 >
-                  <DiscordLogo className="h-6 w-6" />
+                  <div
+                    dangerouslySetInnerHTML={{ __html: siDiscord.svg }}
+                    className="h-6 w-6 fill-white hover:fill-white/50"
+                  />
                 </button>
               </div>
             </div>

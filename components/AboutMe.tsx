@@ -1,14 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/display-name */
 import {
-  ExpoLogo,
-  NextLogo,
-  PrismaLogo,
-  ReactLogo,
-  TailwindLogo,
-  TypescriptLogo,
-} from "../components/Icons/MyIcons";
-import {
   mdiBookOutline,
   mdiChevronLeft,
   mdiChevronRight,
@@ -17,69 +9,58 @@ import {
   mdiSchoolOutline,
 } from "@mdi/js";
 import Icon from "@mdi/react";
-import React, { HTMLAttributes, MutableRefObject } from "react";
-import useElementOnScreen from "../hooks/useElementOnScreen";
 import { useTranslation } from "next-i18next";
+import React, { HTMLAttributes, MutableRefObject } from "react";
+import {
+  siExpo,
+  siExpress,
+  siNextdotjs,
+  siPrisma,
+  siReact,
+  siTailwindcss,
+  siTypescript,
+} from "simple-icons/icons";
+import useElementOnScreen from "../hooks/useElementOnScreen";
 
 const abilities = [
   {
     title: "React.js",
-    icon: (
-      <ReactLogo className="text-white w-12 h-12 group-hover:text-white/50" />
-    ),
+    icon: siReact,
     link: "https://reactjs.org/",
   },
   {
     title: "Next.js",
-    icon: (
-      <NextLogo className="text-white w-12 h-12 group-hover:text-white/50" />
-    ),
+    icon: siNextdotjs,
     link: "https://nextjs.org/",
   },
   {
     title: "React Native",
-    icon: (
-      <ReactLogo className="text-white w-12 h-12 group-hover:text-white/50" />
-    ),
+    icon: siReact,
     link: "https://reactnative.dev/",
   },
   {
     title: "Expo",
-    icon: (
-      <ExpoLogo className="text-white w-12 h-12 group-hover:text-white/50" />
-    ),
+    icon: siExpo,
     link: "https://expo.dev/",
   },
   {
     title: "Express.js",
-    icon: (
-      <img
-        className="object-cover w-full h-12"
-        src="/images/ExpressLogo.png"
-        alt=""
-      />
-    ),
+    icon: siExpress,
     link: "https://expressjs.com/",
   },
   {
     title: "Prisma",
-    icon: (
-      <PrismaLogo className="text-white w-12 h-12 group-hover:text-white/50" />
-    ),
+    icon: siPrisma,
     link: "https://www.prisma.io/",
   },
   {
     title: "Tailwindcss",
-    icon: (
-      <TailwindLogo className="text-white w-12 h-12 group-hover:text-white/50" />
-    ),
+    icon: siTailwindcss,
     link: "https://tailwindcss.com/",
   },
   {
     title: "Typescript",
-    icon: (
-      <TypescriptLogo className="text-white w-12 h-12 group-hover:text-white/50" />
-    ),
+    icon: siTypescript,
     link: "https://www.typescriptlang.org/",
   },
 ];
@@ -100,6 +81,8 @@ const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
   ) as [MutableRefObject<null>, boolean];
 
   const { t } = useTranslation("common");
+
+  // console.log(siReact);
 
   return (
     <section
@@ -144,7 +127,10 @@ const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
                           : null
                       }
                     >
-                      {icon}
+                      <div
+                        dangerouslySetInnerHTML={{ __html: icon.svg }}
+                        className="w-12 h-12 fill-white group-hover:fill-white/50"
+                      />
                       <span className="font-body truncate text-sm text-white group-hover:text-white/50">
                         {title}
                       </span>

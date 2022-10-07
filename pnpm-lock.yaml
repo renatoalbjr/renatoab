@@ -17,6 +17,7 @@ specifiers:
   react: 18.2.0
   react-dom: 18.2.0
   sass: ^1.55.0
+  simple-icons: ^7.14.0
   tailwind-scrollbar: ^2.0.1
   tailwindcss: ^3.1.8
   typescript: 4.8.3
@@ -30,6 +31,7 @@ dependencies:
   next-i18next: 12.1.0_azq6kxkn3od7qdylwkyksrwopy
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  simple-icons: 7.14.0
   tailwind-scrollbar: 2.0.1_tailwindcss@3.1.8
 
 devDependencies:
@@ -2098,6 +2100,11 @@ packages:
       get-intrinsic: 1.1.3
       object-inspect: 1.12.2
     dev: true
+
+  /simple-icons/7.14.0:
+    resolution: {integrity: sha512-peojKZtdmNlM4ofTERoJWwP5p/R3mRBtFf9ERTaEmnepXQxdealNZOyjPQie9M1gKQYuy0xD5ckwUWvNFK/fNQ==}
+    engines: {node: '>=0.12.18'}
+    dev: false
 
   /simple-swizzle/0.2.2:
     resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==}
