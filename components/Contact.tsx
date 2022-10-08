@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 import { Form } from "@formium/client";
-import { mdiGithub } from "@mdi/js";
+import { mdiGithub, mdiLinkedin } from "@mdi/js";
 import Icon from "@mdi/react";
 import { useTranslation } from "next-i18next";
 import React, { HTMLAttributes, useState } from "react";
@@ -129,6 +129,9 @@ const Contact = React.forwardRef<HTMLElement, Props>(
                   />
                 </button>
               </div>
+              <a href="https://linkedin.com/in/renato-albjr">
+                <Icon path={mdiLinkedin} className="h-6 w-6" />
+              </a>
             </div>
           </div>
         </div>
