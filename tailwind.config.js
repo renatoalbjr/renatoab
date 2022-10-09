@@ -9,6 +9,15 @@ module.exports = {
       //HTML tag comparison only for reference, since tags should not be used to resize text
       //https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements#usage_notes
 
+      numeric: [
+        "1rem",
+        {
+          lineHeight: "1",
+          letterSpacing: "0.2rem",
+          fontWeight: "300",
+        },
+      ],
+
       sm: [
         //small
         "0.937rem",
