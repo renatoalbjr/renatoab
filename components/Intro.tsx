@@ -30,8 +30,11 @@ const Intro: NextComponentType<NextPageContext, props, props> = ({
           {t("intro.p")}
         </p>
         <Link href={"#" + t("sections.portfolio")}>
-          <a className="btn btn-primary rounded-full text-lg font-medium font-title mt-8 h-fit py-4 px-8">
-            {t("Portfolio")}
+          <a className="btn btn-primary rounded-full mt-6">{t("Portfolio")}</a>
+        </Link>
+        <Link href="https://github.com/renatoalbjr/renatoab">
+          <a className="btn btn-primary btn-outline rounded-full mt-6 ml-4 lg:ml-6">
+            {t("Github")}
           </a>
         </Link>
       </header>

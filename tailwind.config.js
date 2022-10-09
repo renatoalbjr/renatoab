@@ -82,6 +82,8 @@ module.exports = {
       backgroundImage: {
         primary2BaseGradient:
           "linear-gradient(90deg, #D95800 39.58%, #22211B 100%)",
+        lightPrimaryGradient:
+          "linear-gradient(90deg, #E79D6B 0%, #D95800 100%)",
       },
       fontFamily: {
         body: ["Hind Madurai", "sans-serif"],

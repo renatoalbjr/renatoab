@@ -92,7 +92,7 @@ const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
     >
       <main className="px-6 lg:px-24 py-16 w-full">
         <h1 className="text-4xl font-title text-primary">{t("About_Me")}</h1>
-        <div className="flex flex-col md:grid md:grid-cols-2 md:grid-rows-2 w-full rounded-lg border border-white overflow-hidden mt-8">
+        <div className="grid grid-cols-1 grid-rows-4 md:grid md:grid-cols-2 md:grid-rows-2 w-full rounded-lg border border-white overflow-hidden mt-8">
           {/* Knowledge */}
           <section className="p-4 border border-white pb-6">
             <h1 className="font-title text-2xl text-white mt-4 flex items-center gap-2">
@@ -112,7 +112,7 @@ const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
                   isFirstAbilityVisible ? "invisible " : " "
                 } w-12 h-12 text-white`}
               />
-              <div className="flex flex-row items-center gap-6 mt-6 pb-6 pr-6 overflow-x-scroll scrollbar-thin">
+              <div className="flex flex-row items-center gap-6 mt-12 md:mt-6 pb-6 pr-6 overflow-x-scroll scrollbar-thin">
                 {abilities.map(({ title, icon, link }, index) => {
                   return (
                     <a
