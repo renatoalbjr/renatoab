@@ -79,6 +79,26 @@ module.exports = {
       ],
     },
     extend: {
+      colors: {
+        primary: {
+          100: "#E79D6B",
+          200: "#E28647",
+          300: "#DE6F24",
+          400: "#D95800",
+        },
+        dark: {
+          100: "#E6E6E6",
+          200: "#CECECC",
+          300: "#B5B5B3",
+          400: "#9D9C9A",
+          500: "#848480",
+          600: "#6C6B67",
+          700: "#53524E",
+          800: "#3B3A34",
+          900: "#22211B",
+        },
+        light: "#F4E2D6",
+      },
       backgroundImage: {
         primary2BaseGradient:
           "linear-gradient(90deg, #D95800 39.58%, #22211B 100%)",
