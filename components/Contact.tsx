@@ -29,7 +29,7 @@ const Contact = React.forwardRef<HTMLElement, Props>(
         className="bg-base-100 px-6 md:px-12 lg:px-24 py-16"
         {...props}
       >
-        <h1 className="font-title text-4xl text-primary">
+        <h1 className="font-title text-4xl text-primary-400">
           {t("contact.title")}
         </h1>
         <p className="text-white font-body text-base">{t("contact.text")}</p>
@@ -91,7 +91,7 @@ const Contact = React.forwardRef<HTMLElement, Props>(
               {t("contact.send")}
             </button>
           </form>
-          <div className="mt-10 pt-10 border-t md:mt-0 md:pt-0 md:border-t-0 md:pl-6 md:border-l border-primary md:ml-6">
+          <div className="mt-10 pt-10 border-t md:mt-0 md:pt-0 md:border-t-0 md:pl-6 md:border-l border-primary-400 md:ml-6">
             <h2 className="text-white font-title text-2xl">
               {t("contact.email")}
             </h2>

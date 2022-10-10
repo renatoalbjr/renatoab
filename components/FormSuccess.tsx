@@ -21,7 +21,7 @@ const FormSuccess: NextComponentType<NextPageContext, Props, Props> = ({
           path={mdiCheckCircleOutline}
           className="text-emerald-400 w-16 h-16"
         />
-        <span className="pt-2 text-primary font-title text-4xl">
+        <span className="pt-2 text-primary-400 font-title text-4xl">
           Thank You!
         </span>
         <p className="text-white font-body text-base">

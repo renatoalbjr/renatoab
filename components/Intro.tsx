@@ -19,10 +19,10 @@ const Intro: NextComponentType<NextPageContext, props, props> = ({
         <h1
           className={
             "font-title text-4xl text-white " +
-            "after:absolute after:w-full after:rounded-full after:h-1 after:bg-primary after:block after:mt-6"
+            "after:absolute after:w-full after:rounded-full after:h-1 after:bg-primary-400 after:block after:mt-6"
           }
         >
-          {t("intro.line_1")} <span className="text-primary">Renato</span>,
+          {t("intro.line_1")} <span className="text-primary-400">Renato</span>,
           <br />
           {t("intro.line_2")}.
         </h1>

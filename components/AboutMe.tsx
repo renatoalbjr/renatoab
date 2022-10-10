@@ -91,14 +91,16 @@ const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
       {...props}
     >
       <main className="px-6 lg:px-24 py-16 w-full">
-        <h1 className="text-4xl font-title text-primary">{t("About_Me")}</h1>
+        <h1 className="text-4xl font-title text-primary-400">
+          {t("About_Me")}
+        </h1>
         <div className="grid grid-cols-1 grid-rows-4 md:grid md:grid-cols-2 md:grid-rows-2 w-full rounded-lg border border-white overflow-hidden mt-8">
           {/* Knowledge */}
           <section className="p-4 border border-white pb-6">
             <h1 className="font-title text-2xl text-white mt-4 flex items-center gap-2">
               <Icon
                 path={mdiBookOutline}
-                className="w-12 h-12 m-2 text-primary "
+                className="w-12 h-12 m-2 text-primary-400 "
               />
               {t("about_1.title")}
             </h1>
@@ -152,17 +154,17 @@ const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
             <h1 className="font-title text-2xl text-white mt-4 flex items-center gap-2">
               <Icon
                 path={mdiSchoolOutline}
-                className="w-12 h-12 m-2 text-primary "
+                className="w-12 h-12 m-2 text-primary-400 "
               />
               {t("about_2.title")}
             </h1>
             <p className="font-body text-base text-white mt-4">
               {t("about_2.text.1")}
-              <span className="text-primary">{t("about_2.text.2")}</span>
+              <span className="text-primary-400">{t("about_2.text.2")}</span>
               {t("about_2.text.3")}
-              <span className="text-primary">{t("about_2.text.4")}</span>
+              <span className="text-primary-400">{t("about_2.text.4")}</span>
               {t("about_2.text.5")}
-              <span className="text-primary">{t("about_2.text.6")}</span>
+              <span className="text-primary-400">{t("about_2.text.6")}</span>
               {t("about_2.text.7")}
             </p>
           </section>
@@ -170,7 +172,10 @@ const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
           {/* History */}
           <section className="p-4 border border-white pb-6">
             <h1 className="font-title text-2xl text-white mt-4 flex items-center gap-2">
-              <Icon path={mdiHistory} className="w-12 h-12 m-2 text-primary " />
+              <Icon
+                path={mdiHistory}
+                className="w-12 h-12 m-2 text-primary-400 "
+              />
               {t("about_3.title")}
             </h1>
             <p className="font-body text-base text-white mt-4">
@@ -183,7 +188,7 @@ const AboutMe = React.forwardRef<HTMLElement, Props>(({ ...props }, ref) => {
             <h1 className="font-title text-2xl text-white mt-4 flex items-center gap-2">
               <Icon
                 path={mdiMapMarkerOutline}
-                className="w-12 h-12 m-2 text-primary "
+                className="w-12 h-12 m-2 text-primary-400 "
               />
               {t("about_4.title")}
             </h1>
